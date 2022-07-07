@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="../static/webapp/style.css">
+    <!-- <link rel=”stylesheet” href=”{% static 'css/style.css' %}”> -->
+
+
+  </head>
+  <body>
+
+    <nav id="navbar-example2" class="navbar sticky-top navbar-light bg-light px-5">
+      <a class="navbar-brand" href="#">myTrip</a>
+      <!-- <ul class="nav nav-pills">
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">Paths</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Restaurants</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading3">Attractions</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading4">Best-Reviews</a>
+          </li>
+
+          </ul>
+
+      </ul> -->
+  </nav>
+    </br>
+    <h2 class="text-center">Hello, and welcome to myTrip!</h2>
+    <br>
+    <div class="row justify-content-center">
+      <div class="col-2">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+              <h5 class="card-title">Sign in</h5>
+              <p class="card-text">If you already have an account press below to jump back in</p>
+              <a href="{% url 'sign-in' %}" class="btn btn-primary">Sign in</a>
+              </div>
+          </div>
+      </div>
+
+
+      
+    </div>
+    <br>
+    <div class="row justify-content-center">
+    <div class="col-2">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Register</h5>
+            <p class="card-text">If you dont already have an account press below to set up</p>
+            <a href="{% url 'register' %}" class="btn btn-primary">register</a>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+  </body>
+</html>

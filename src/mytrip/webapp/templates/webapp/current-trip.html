@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Current Trip</title>
+    <link rel="stylesheet" href="../static/webapp/style.css">
+    <!-- <link rel=”stylesheet” href=”{% static 'css/style.css' %}”> -->
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- {% if no_current_trip %}
+        <h3>{{ no_current_trip }}</h3>
+        <a href="/create-trip">Create Trip</a>
+    {% endif %} -->
+
+    {% if no_current_trip %}
+    <h3>{{ no_current_trip }}</h3>
+    <a href="/create-trip">Create Trip</a>
+    {% endif %}
+    <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+    <nav id="navbar-example2" class="navbar sticky-top navbar-light bg-light px-5">
+        <a class="navbar-brand" href="#">myTrip</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">Paths</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Restaurants</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">Attractions</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading4">Best-Reviews</a>
+            </li>
+
+            </ul>
+
+        </ul>
+    </nav>
+
+    <div class="text-center" data-spy="scroll" data-target="#navbar-example2" data-offset="0"></div>
+    
+        <div class="container testimonial-group pb-5 pt-5" id="scrollspyHeading1">
+
+            <h1 class="text-center pt-5">We prepared you a little something you might like...</h1>
+            <h4 class="text-center">A combination of top activities to give you an unforgettable experience</h4>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="jumbotron" id ="scrollspyHeading2">
+                        <h1 class="display-6">Plan 1</h1>
+                        <p>Dolbys gastro pub</p>
+                        <p>Wet water theme park</p>
+                        <p>Bar and grill by Sam</p>
+
+                        <hr class="my-4">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="jumbotron" id ="scrollspyHeading2">
+                        <h1 class="display-6">Plan 2</h1>
+                        <p>Henessey Pub</p>
+                        <p>London's hidden walk</p>
+                        <p>The british monument museum</p>
+                        <hr class="my-4">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="jumbotron" id ="scrollspyHeading2">
+                        <h1 class="display-6">Plan 3</h1>
+                        <p>Boat taxi on the themes</p>
+                        <p>Weatherspoons</p>
+                        <p>Shakesspears Globe</p>
+                        <hr class="my-4">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="jumbotron" id ="scrollspyHeading2">
+                        <h1 class="display-6">Plan 4</h1>
+                        <p class="lead"></p>
+                        <hr class="my-4">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+    <!-- <h1 class="text-center restaurant-color">Restaurants</h1> -->
+            <div class="jumbotron" id ="scrollspyHeading2">
+                <h1 class="display-4">Restaurants to make day brighter</h1>
+                <p class="lead">Below are some of the best Restaurants we could find...</p>
+                <hr class="my-4">
+                <p>All you need for the perfect meal out!</p>
+            </div>
+
+
+            <div class="row">
+                <!-- <div class="col-4">
+                    <h4>Your best restaurants</h4>
+                    <p>ones we picked out just for you...</p>
+                </div> -->
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Toners</h5>
+                        <p class="card-text">romantic, open-late</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">La gondala</h5>
+                        <p class="card-text">italian, cheap</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">The terrace cafe</h5>
+                        <p class="card-text">outdoor-dining, coffee</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">M&S restaurant</h5>
+                        <p class="card-text">busy, good-for-groups</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">The corner</h5>
+                        <p class="card-text">bar-and-grill, coffee</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <!-- <div class="card">
+                <div class="card-header h1 restaurant-color">
+                    Activities
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Below are some of the best Activities we could find...</h5>
+                <p class="card-text">All you need for the perfect day out!</p>
+                </div>
+            </div> -->
+
+            <div class="jumbotron" id ="scrollspyHeading3">
+                <h1 class="display-4">Attractions to make your trip perfect</h1>
+                <p class="lead">Below are some of the best Activities we could find...</p>
+                <hr class="my-4">
+                <p>All you need for the perfect day out!</p>
+            </div>
+
+            <div class="row pt-5 pb-5">
+                <div class="col-4">
+                    <h4 id="scrollspyHeading1">Activities that we know you'll love</h4>
+                    <p>based on your best interests</p>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/activityLogo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ attractions.1.0.get_activity_title }}</h5>
+                        <p class="card-text">{{ activityfeatures.1.get_feature1 }}, {{ activityfeatures.0.get_feature2 }}</p>
+                        <a href="{% url 'view_event' attractions.1.0.get_id %}" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/activityLogo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ attractions.2.0.get_activity_title}}</h5>
+                        <p class="card-text">{{ activityfeatures.2.get_feature1 }}, {{ activityfeatures.2.get_feature2 }}</p>
+                        <a href="{% url 'view_event' attractions.2.0.get_id %}" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/activityLogo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ attractions.3.0.get_activity_title }}</h5>
+                        <p class="card-text">{{ activityfeatures.3.get_feature3 }}, {{ activityfeatures.3.get_feature2 }}</p>
+                        <a href="{% url 'view_event' attractions.3.0.get_id %}" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/activityLogo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ attractions.4.0.get_activity_title }}</h5>
+                        <p class="card-text">{{ activityfeatures.4.get_feature1 }}, {{ activityfeatures.4.get_feature2 }}</p>
+                        <a href="{% url 'view_event' attractions.4.0.get_id %}" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/activityLogo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ attractions.5.0.get_activity_title }}</h5>
+                        <p class="card-text">{{ activityfeatures.5.get_feature3 }}, {{ activityfeatures.5.get_feature2 }}</p>
+                        <a href="{% url 'view_event' attractions.5.0.get_id %}" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="jumbotron" id ="scrollspyHeading2">
+                <h1 class="display-4">The best reviewed attractions</h1>
+                <p class="lead">Below are some of the best reviewed we could find...</p>
+                <hr class="my-4">
+                <p>All you need for the perfect meal out!</p>
+            </div>
+
+
+            <div class="row">
+                <div class="col-4">
+                    <h4>Your best options</h4>
+                    <p>ones we picked out just for you...</p>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Weatherspoons</h5>
+                        <p class="card-text">A little bit of info about the restaurant</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">The pyg</h5>
+                        <p class="card-text">cheap, quiet</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Toners bar and grill</h5>
+                        <p class="card-text">quiet, good-for-groups</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Alfies</h5>
+                        <p class="card-text">bar, expensive</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">The bar in the city</h5>
+                        <p class="card-text">busy, thai</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        
+</body>
+</html>

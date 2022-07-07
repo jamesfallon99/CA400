@@ -1,0 +1,67 @@
+h1 {
+  color: blue;
+}
+
+h4 {
+  color: blue;
+}
+
+.card-pos{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+
+/* .card-body {
+  min-height: 300px;
+  min-width: 300px;
+  margin-right: 5px;
+} */
+
+/* https://stackoverflow.com/questions/38901166/horizontal-scrollable-divs-in-a-bootstrap-row */
+/* The heart of the matter */
+.testimonial-group > .row {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.restaurant-color{
+  color: rgb(22, 125, 209);
+}
+
+.testimonial-group > .row > .col-4 {
+  display: inline-block;
+}
+
+/* Decorations */
+/* .col-4 { color: #fff; font-size: 48px; padding-bottom: 20px; padding-top: 18px; }
+.col-4:nth-child(3n+1) { background: #c69; }
+.col-4:nth-child(3n+2) { background: #9c6; }
+.col-4:nth-child(3n+3) { background: #69c; } */
+
+.wrapper{
+  max-height: 120px;
+  border: 1px solid blue;
+  display: flex;
+  overflow-x: auto;
+}
+
+.wrapper .item{
+  min-width: 110px;
+  height: 110px;
+  text-align: center;
+  background-color: black;
+}
+
+/* div {
+  background-color: lightblue;
+  border: 1px solid black;
+  height: 100px;
+  width: 500px;
+  overflow-x: scroll;
+  }
+p {
+  width: 1000px;
+  margin: 10px;
+  } */

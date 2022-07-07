@@ -1,0 +1,13 @@
+<body>
+  <h1>Create Account</h1>
+  <form method="post">
+    <table>
+      {{ userform }}
+      <!--Django can create the form for us if we pass it through our 
+                    view -->
+    </table>
+    {% csrf_token %}
+    <!--Important as it allows Django to check that the data submitted into the form is not coming from a csrf tag and prevents an error occurring-->
+    <button type="submit">Submit</button>
+  </form>
+</body>

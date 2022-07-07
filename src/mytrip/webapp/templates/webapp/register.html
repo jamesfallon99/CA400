@@ -1,0 +1,79 @@
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="../static/webapp/style.css">
+  <!-- <link rel=”stylesheet” href=”{% static 'css/style.css' %}”> -->
+      <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- {% if no_current_trip %}
+      <h3>{{ no_current_trip }}</h3>
+      <a href="/create-trip">Create Trip</a>
+  {% endif %} -->
+
+  <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+  <nav id="navbar-example2" class="navbar sticky-top navbar-light bg-light px-5">
+      <a class="navbar-brand" href="#">myTrip</a>
+      <!-- <ul class="nav nav-pills">
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">Paths</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Restaurants</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading3">Attractions</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading4">Best-Reviews</a>
+          </li>
+
+          </ul>
+
+      </ul> -->
+  </nav>
+
+<div class="container">
+<div class="row">
+	<div class="col d-flex justify-content-center">
+<div class="card card-pos">
+  <article class="card-body">
+  <h4 class="card-title mb-4 mt-1">Register</h4>
+    <form method="POST" actions="">
+      {%csrf_token%} {{form.username.label}} {{form.username}}
+      <br />
+      <br />
+    
+      {{form.email.label}} {{form.email}}
+      <br />
+      <br />
+      {{form.password1.label}} {{form.password1}}
+      <br />
+      <br />
+      {{form.password2.label}} {{form.password2}}
+      <br />
+      <br />
+      <input type="submit" name="Create User" value="Register">
+    </form>
+    
+    {{form.errors}}
+    
+    {% comment %}
+    
+    Your password can’t be too similar to your other personal information.
+    Your password must contain at least 8 characters.
+    Your password can’t be a commonly used password.
+    Your password can’t be entirely numeric. 
+    
+    These are django's built in password edge cases
+    {% endcomment %}
+  
+  </article>
+  </div> <!-- card.// -->
+  </div>
+</div> <!--row//-->
+</div> <!--container//-->
+</body>

@@ -1,0 +1,78 @@
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Current Trip</title>
+  <link rel="stylesheet" href="../static/webapp/style.css">
+  <!-- <link rel=”stylesheet” href=”{% static 'css/style.css' %}”> -->
+      <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- {% if no_current_trip %}
+      <h3>{{ no_current_trip }}</h3>
+      <a href="/create-trip">Create Trip</a>
+  {% endif %} -->
+
+  <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+  <nav id="navbar-example2" class="navbar sticky-top navbar-light bg-light px-5">
+      <a class="navbar-brand" href="#">myTrip</a>
+      <!-- <ul class="nav nav-pills">
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">Paths</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Restaurants</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading3">Attractions</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading4">Best-Reviews</a>
+          </li>
+
+          </ul>
+
+      </ul> -->
+  </nav>
+
+<div class="container">
+<div class="row">
+	<div class="col d-flex justify-content-center">
+<div class="card card-pos">
+  <article class="card-body">
+  <h4 class="card-title mb-4 mt-1">{{ attraction.get_activity_title }}</h4>
+    {% if rating %}
+    <h4>{{ rating }}% Liked this attraction</h4>
+    {% else %}
+    <h4>There is currently no rating for this attraction</h4>
+    {% endif %}
+
+    <br>
+    <p>How likely would you attend (1 = Would never attend | 5 = Would love to attend)</p>
+    <form method="POST" action="">
+    {% csrf_token %}
+      <input type="radio" name="rating" id="rating1" value="1" required>1
+      <input type="radio" name="rating" id="rating2" value="2" required>2
+      <input type="radio" name="rating" id="rating3" value="3" required>3
+      <input type="radio" name="rating" id="rating4" value="4" required>4
+      <input type="radio" name="rating" id="rating5" value="5" required>5
+      <br>
+    <input type="submit" />
+    </form>
+
+    <br>
+
+    <form method="POST" action="">
+        Review 
+        <input type="review" name="review" />
+        <br />
+        {% csrf_token %}
+        <input type="submit" />
+      </form>
+  </article>
+  </div> <!-- card.// -->
+  </div>
+</div> <!--row//-->
+</div> <!--container//-->
+</body>

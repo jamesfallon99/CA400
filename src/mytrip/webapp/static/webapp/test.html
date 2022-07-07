@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Current Trip</title>
+    <link rel="stylesheet" href="../static/webapp/style.css">
+    <!-- <link rel=”stylesheet” href=”{% static 'css/style.css' %}”> -->
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- {% if no_current_trip %}
+        <h3>{{ no_current_trip }}</h3>
+        <a href="/create-trip">Create Trip</a>
+    {% endif %} -->
+
+    <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">myTrip</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">First</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Second</a>
+            </li>
+            </ul>
+
+        </ul>
+    </nav>
+
+    <div class="text-center" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <h1>Paths</h1>
+        <div class="card text-center">
+            <div class="card-header">
+                We prepared you a little something you might like...
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Paths</h5>
+              <p class="card-text">A combination of top activities to give you an unforgettable experience</p>
+              <a href="#" class="btn btn-primary">Tell me more...</a>
+            </div>
+            <div class="card-footer text-muted">
+              myTrip
+            </div>
+          </div>
+    </div>
+
+    <h1 class="text-center">What we recommend for your trip!</h1>
+
+    <div class="container testimonial-group">
+
+        <div class="row">
+            <div class="col-4">
+                <h4 id="scrollspyHeading1">Your best restaurants</h4>
+                <p>ones we picked out just for you...</p>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Restaurant name</h5>
+                    <p class="card-text">A little bit of info about the restaurant</p>
+                    <a href="#" class="btn btn-primary">More info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../static/webapp/restaurant2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Restaurant name</h5>
+                    <p class="card-text">A little bit of info about the restaurant</p>
+                    <a href="#" class="btn btn-primary">More info</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+        <h1>Based on what you like...</h1>
+        <h4 id="scrollspyHeading1">Content based filtering -> restaurants</h4>
+        <p>1</p>
+        <h4 id="scrollspyHeading2">Collaborative based filtering -> restaurants</h4>
+        <p>2</p>
+        <h1>Based on what others like...</h1>
+        <h4 id="scrollspyHeading3">Content based filtering -> attractions</h4>
+        <p>3</p>
+        <h4 id="scrollspyHeading4">Collaborative based filtering -> attractions</h4>
+        <p>4</p>
+        <h4 id="scrollspyHeading5">Semantic analysis -> top reviewed</h4>
+        <p>5</p>
+
+</body>
+</html>
