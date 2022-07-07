@@ -1,5 +1,5 @@
 # CA400
-DCU Final Year Project - MyTrip
+DCU Final Year Project - MyTrip - 75%
 
 MyTrip is a web application that uses machine learning algorithms to recommend users with points of interest, attractions and restaurants in a city they are interested in travelling to. The goal of the project is to improve the experience of travelling in a city you know nothing about. The app displays recommendations to the user in their desired location based off of their interests.
 
